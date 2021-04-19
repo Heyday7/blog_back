@@ -9,14 +9,14 @@ class Post(models.Model):
     series = models.ForeignKey(
         'Series', 
         on_delete=models.SET_NULL,
-        related_names='posts',
+        related_name='posts',
         related_query_name='post',
         null=True)
     user = models.ForeignKey(
       	User,
-		on_delete=models.CASCADE,
-		related_names='posts',
-		related_query_name='post'
+        on_delete=models.CASCADE,
+        related_name='posts',
+        related_query_name='post'
     )
 
     def __str__(self):
