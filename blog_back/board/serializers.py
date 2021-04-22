@@ -12,8 +12,8 @@ class CommentSerializer(serializers.ModelSerializer):
 			'id',
 			'content',
 			'created_at',
-			# 'user',
-			# 'post'
+			'user',
+			'post'
 		]
 
 
@@ -27,7 +27,7 @@ class PostSerializer(serializers.ModelSerializer):
 		model = Post
 		fields = [
 			'id',
-			'title'
+			'title',
 			'content',
 			'created_at',
 			'updated_at',
