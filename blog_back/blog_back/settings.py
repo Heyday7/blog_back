@@ -86,6 +86,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'blog_back.wsgi.application'
 
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+    	'rest_framework.authentication.SessionAuthentication',
+		'rest_framework.authentication.BasicAuthentication'
+    )
+}
+
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
